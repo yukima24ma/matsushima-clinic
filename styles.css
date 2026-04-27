@@ -1,0 +1,194 @@
+:root {
+  --primary: #1f5fae;
+  --primary-dark: #184a88;
+  --accent: #e65151;
+  --bg: #f5f7fb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+.container {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  text-align: center;
+  padding: 2.4rem 0 1.3rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0;
+}
+
+.furigana {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.phone-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+main {
+  padding-bottom: 3rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  color: var(--primary);
+  border-bottom: 2px solid #7aa6df;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem;
+  vertical-align: top;
+}
+
+.info-table th {
+  width: 230px;
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.35rem;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.hours-table th,
+.hours-table td {
+  border: 1px solid #9ca3af;
+  padding: 0.7rem;
+  background: #fff;
+}
+
+.notice-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.notice-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 0.4rem;
+  padding: 0.8rem 1rem;
+}
+
+.notice-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.footer {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  padding: 1.4rem 0;
+  font-size: 0.95rem;
+}
+
+.map-embed {
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 760px) {
+  .info-table th,
+  .info-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .info-table th {
+    margin-top: 0.5rem;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .phone-button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
