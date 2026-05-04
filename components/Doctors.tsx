@@ -10,7 +10,7 @@ const doctors = [
 
 export default function Doctors() {
   return (
-    <section id="doctors" style={{ background: '#fff', padding: '88px 40px' }}>
+    <section id="doctors" className="resp-section-pad" style={{ background: '#fff', padding: '88px 40px' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         {/* Section header */}
         <div style={{ marginBottom: 48 }}>
@@ -26,6 +26,7 @@ export default function Doctors() {
             DOCTORS
           </p>
           <h2
+            className="resp-h2"
             style={{
               fontFamily: 'var(--font-noto-serif-jp), serif',
               fontSize: 32,
@@ -50,6 +51,7 @@ export default function Doctors() {
 
         {/* single doctor: photo left, info right */}
         <div
+          className="doctor-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '300px 1fr',
@@ -59,6 +61,7 @@ export default function Doctors() {
         >
           {/* Photo */}
           <div
+            className="doctor-photo"
             style={{
               height: 360,
               borderRadius: 3,

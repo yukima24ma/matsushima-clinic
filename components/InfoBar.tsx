@@ -8,6 +8,7 @@ export default function InfoBar() {
   return (
     <div style={{ background: '#1a4c7c', color: '#fff', flexShrink: 0 }}>
       <div
+        className="infobar-inner"
         style={{
           maxWidth: 1100,
           margin: '0 auto',
@@ -19,6 +20,7 @@ export default function InfoBar() {
         {items.map((item, i) => (
           <div
             key={item.label}
+            className="infobar-cell"
             style={{
               padding: '20px 32px',
               borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.2)' : 'none',

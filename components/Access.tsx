@@ -6,7 +6,6 @@ const addressRows = [
 ]
 
 const days = ['月', '火', '水', '木', '金', '土', '日']
-// ○=true, —=false
 const hoursGrid = [
   { label: '午前 9:00〜12:00', slots: [true, true, true, false, true, true, false] },
   { label: '午後 16:30〜19:00', slots: [true, true, true, false, true, false, false] },
@@ -14,7 +13,7 @@ const hoursGrid = [
 
 export default function Access() {
   return (
-    <section id="access" style={{ background: '#fff', padding: '88px 40px' }}>
+    <section id="access" className="resp-section-pad" style={{ background: '#fff', padding: '88px 40px' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         {/* Section header */}
         <div style={{ marginBottom: 48 }}>
@@ -30,6 +29,7 @@ export default function Access() {
             ACCESS
           </p>
           <h2
+            className="resp-h2"
             style={{
               fontFamily: 'var(--font-noto-serif-jp), serif',
               fontSize: 32,
@@ -43,6 +43,7 @@ export default function Access() {
 
         {/* 2-column layout */}
         <div
+          className="access-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -100,32 +101,34 @@ export default function Access() {
               >
                 診療時間
               </p>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, fontFamily: 'var(--font-noto-sans-jp), sans-serif' }}>
-                <thead>
-                  <tr style={{ background: '#f4f7fb' }}>
-                    <th style={{ padding: '10px 12px', fontWeight: 300, color: '#8a96a3', textAlign: 'left', border: '1px solid #d8e2ec', minWidth: 160 }} />
-                    {days.map((d) => (
-                      <th key={d} style={{ padding: '10px 0', fontWeight: 400, color: '#1e2530', textAlign: 'center', border: '1px solid #d8e2ec', width: 44 }}>
-                        {d}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {hoursGrid.map(({ label, slots }) => (
-                    <tr key={label} style={{ background: '#fafcfe' }}>
-                      <td style={{ padding: '12px', color: '#5a6472', fontWeight: 300, border: '1px solid #d8e2ec' }}>
-                        {label}
-                      </td>
-                      {slots.map((open, i) => (
-                        <td key={i} style={{ padding: '12px 0', textAlign: 'center', border: '1px solid #d8e2ec', color: open ? '#1a4c7c' : '#8a96a3' }}>
-                          {open ? '○' : '—'}
-                        </td>
+              <div className="hours-table-scroll">
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, fontFamily: 'var(--font-noto-sans-jp), sans-serif' }}>
+                  <thead>
+                    <tr style={{ background: '#f4f7fb' }}>
+                      <th style={{ padding: '10px 12px', fontWeight: 300, color: '#8a96a3', textAlign: 'left', border: '1px solid #d8e2ec', minWidth: 160 }} />
+                      {days.map((d) => (
+                        <th key={d} style={{ padding: '10px 0', fontWeight: 400, color: '#1e2530', textAlign: 'center', border: '1px solid #d8e2ec', width: 44 }}>
+                          {d}
+                        </th>
                       ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {hoursGrid.map(({ label, slots }) => (
+                      <tr key={label} style={{ background: '#fafcfe' }}>
+                        <td style={{ padding: '12px', color: '#5a6472', fontWeight: 300, border: '1px solid #d8e2ec' }}>
+                          {label}
+                        </td>
+                        {slots.map((open, i) => (
+                          <td key={i} style={{ padding: '12px 0', textAlign: 'center', border: '1px solid #d8e2ec', color: open ? '#1a4c7c' : '#8a96a3' }}>
+                            {open ? '○' : '—'}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
               <p style={{ marginTop: 10, fontSize: 12, color: '#8a96a3', fontFamily: 'var(--font-noto-sans-jp), sans-serif' }}>
                 休診日：木、日、祝日
               </p>

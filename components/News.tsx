@@ -11,8 +11,8 @@ export default function News() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section id="news" style={{ background: '#f4f7fb', padding: '88px 0' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }}>
+    <section id="news" className="resp-section" style={{ background: '#f4f7fb', padding: '88px 0' }}>
+      <div className="resp-inner" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }}>
         {/* Section header */}
         <div style={{ marginBottom: 40 }}>
           <p
@@ -27,6 +27,7 @@ export default function News() {
             NEWS
           </p>
           <h2
+            className="resp-h2"
             style={{
               fontFamily: 'var(--font-noto-serif-jp), serif',
               fontSize: 32,
@@ -46,6 +47,7 @@ export default function News() {
               href={item.href}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
+              className="news-item"
               style={{
                 display: 'flex',
                 alignItems: 'center',

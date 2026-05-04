@@ -14,8 +14,8 @@ export default function Departments() {
   const [hovered, setHovered] = useState<number | null>(null)
 
   return (
-    <section id="departments" style={{ background: '#f4f7fb', padding: '88px 0' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }}>
+    <section id="departments" className="resp-section" style={{ background: '#f4f7fb', padding: '88px 0' }}>
+      <div className="resp-inner" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 40px' }}>
         {/* Section header */}
         <div style={{ marginBottom: 48 }}>
           <p
@@ -30,6 +30,7 @@ export default function Departments() {
             DEPARTMENTS
           </p>
           <h2
+            className="resp-h2"
             style={{
               fontFamily: 'var(--font-noto-serif-jp), serif',
               fontSize: 32,
@@ -52,8 +53,9 @@ export default function Departments() {
           </p>
         </div>
 
-        {/* 3x2 grid */}
+        {/* Grid */}
         <div
+          className="dept-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr',

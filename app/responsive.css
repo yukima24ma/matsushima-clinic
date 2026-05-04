@@ -1,57 +1,14 @@
-@import "tailwindcss";
+/* ===== Responsive base ===== */
 
-:root {
-  --color-primary: #1a4c7c;
-  --color-accent: #3a7fd4;
-  --color-accent-soft: #d0e4f5;
-  --color-bg: #fafaf8;
-  --color-bg-alt: #f4f7fb;
-  --color-text: #1e2530;
-  --color-text-mid: #5a6472;
-  --color-text-light: #8a96a3;
-  --color-rule: #d8e2ec;
-}
-
-@theme inline {
-  --color-primary: #1a4c7c;
-  --color-accent: #3a7fd4;
-  --color-accent-soft: #d0e4f5;
-  --color-bg: #fafaf8;
-  --color-bg-alt: #f4f7fb;
-  --color-text: #1e2530;
-  --color-text-mid: #5a6472;
-  --color-text-light: #8a96a3;
-  --color-rule: #d8e2ec;
-  --font-serif: var(--font-noto-serif-jp);
-  --font-sans: var(--font-noto-sans-jp);
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-noto-sans-jp), 'Noto Sans JP', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
-}
-
-/* ===== Responsive ===== */
-
-/* Nav */
 .nav-container { padding: 0 40px; }
 .nav-hamburger { display: none; }
-
-/* Hours table scroll wrapper */
 .hours-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ===== Mobile (max 768px) ===== */
 
 @media (max-width: 768px) {
   /* Nav */
-  .nav-container { padding: 0 20px !important; }
+  .nav-container { padding: 0 20px; }
   .nav-links { display: none !important; }
   .nav-hamburger { display: flex !important; }
 
@@ -68,9 +25,12 @@ body {
   /* InfoBar */
   .infobar-inner { grid-template-columns: 1fr !important; padding: 0 !important; }
   .infobar-cell { padding: 14px 20px !important; }
-  .infobar-cell + .infobar-cell { border-left: none !important; border-top: 1px solid rgba(255,255,255,0.15) !important; }
+  .infobar-cell + .infobar-cell {
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.15) !important;
+  }
 
-  /* Section wrappers */
+  /* Sections */
   .resp-section { padding: 56px 0 !important; }
   .resp-section-pad { padding: 56px 20px !important; }
   .resp-inner { padding: 0 20px !important; }
@@ -93,17 +53,23 @@ body {
   .hours-table-scroll table { min-width: 380px; }
 
   /* Footer */
-  .footer-top { flex-direction: column !important; align-items: flex-start !important; gap: 28px !important; }
+  .footer-top {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 28px !important;
+  }
 
   /* Mobile bottom bar */
   .mobile-bar { display: flex !important; }
 
-  /* Main bottom padding so content isn't hidden behind the bar */
+  /* Main content bottom padding for fixed bar */
   .main-page { padding-bottom: 72px !important; }
 
   /* Article page */
   .article-main { padding: 48px 20px !important; }
 }
+
+/* ===== Desktop (min 769px) ===== */
 
 @media (min-width: 769px) {
   .mobile-bar { display: none !important; }

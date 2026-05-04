@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Serif_JP, Noto_Sans_JP } from 'next/font/google'
 import './globals.css'
+import './responsive.css'
 
 const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],

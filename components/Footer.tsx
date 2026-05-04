@@ -17,6 +17,7 @@ export default function Footer() {
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         {/* Top row: logo + link columns */}
         <div
+          className="footer-top"
           style={{
             display: 'flex',
             justifyContent: 'space-between',
@@ -75,12 +76,8 @@ export default function Footer() {
                           fontFamily: 'var(--font-noto-sans-jp), sans-serif',
                           transition: 'opacity 0.15s',
                         }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.color = 'rgba(255,255,255,1)'
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.color = 'rgba(255,255,255,0.75)'
-                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,1)' }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)' }}
                       >
                         {link}
                       </a>

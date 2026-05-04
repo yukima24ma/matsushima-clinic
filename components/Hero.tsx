@@ -5,7 +5,7 @@ import InfoBar from './InfoBar'
 
 export default function Hero() {
   return (
-    <div style={{ height: 'calc(100vh - 68px)', display: 'flex', flexDirection: 'column' }}>
+    <div className="hero-outer" style={{ height: 'calc(100vh - 68px)', display: 'flex', flexDirection: 'column' }}>
       {/* Hero body */}
       <div
         style={{
@@ -16,6 +16,7 @@ export default function Hero() {
         }}
       >
         <div
+          className="hero-inner"
           style={{
             maxWidth: 1100,
             margin: '0 auto',
@@ -41,6 +42,7 @@ export default function Hero() {
               地域に根ざした医療 ——
             </p>
             <h1
+              className="hero-h1"
               style={{
                 fontFamily: 'var(--font-noto-serif-jp), serif',
                 fontSize: 44,
@@ -65,7 +67,7 @@ export default function Hero() {
             >
               松島医院は地域の皆様に寄り添い、<br />丁寧で温かな医療を提供しています。
             </p>
-            <div style={{ display: 'flex', gap: 12 }}>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <a
                 href="#access"
                 style={{
@@ -108,6 +110,7 @@ export default function Hero() {
 
           {/* Right column: clinic exterior photo */}
           <div
+            className="hero-image-col"
             style={{
               height: 380,
               borderRadius: 4,
@@ -122,9 +125,6 @@ export default function Hero() {
               style={{ objectFit: 'cover', objectPosition: 'center' }}
               priority
             />
-            <span style={{ display: 'none' }}>
-              院内・外観の写真
-            </span>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import MobileBottomBar from '@/components/MobileBottomBar'
 
 export const metadata: Metadata = {
   title: 'ゴールデンウィークの休診のお知らせ | 松島医院',
@@ -13,7 +14,7 @@ export default function GwHolidayPage() {
       <Nav />
 
       {/* Article */}
-      <main style={{ background: '#f4f7fb', minHeight: 'calc(100vh - 68px)', padding: '64px 40px' }}>
+      <main className="article-main" style={{ background: '#f4f7fb', minHeight: 'calc(100vh - 68px)', padding: '64px 40px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
           {/* Breadcrumb */}
@@ -113,6 +114,7 @@ export default function GwHolidayPage() {
       </main>
 
       <Footer />
+      <MobileBottomBar />
     </>
   )
 }
