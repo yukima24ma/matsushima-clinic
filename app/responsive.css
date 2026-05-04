@@ -1,3 +1,8 @@
+/* Prevent horizontal overflow on all screen sizes */
+html {
+  overflow-x: hidden;
+}
+
 /* ===== Responsive base ===== */
 
 .nav-container { padding: 0 40px; }
