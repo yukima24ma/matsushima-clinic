@@ -1,6 +1,7 @@
 /* Prevent horizontal overflow on all screen sizes */
-html {
+html, body {
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* ===== Responsive base ===== */
@@ -55,7 +56,11 @@ html {
 
   /* Access */
   .access-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
-  .hours-table-scroll table { min-width: 380px; }
+  .hours-table-scroll table { min-width: 0 !important; width: 100% !important; }
+  .hours-table-scroll th:first-child,
+  .hours-table-scroll td:first-child { min-width: 110px !important; font-size: 11px !important; }
+  .hours-table-scroll th:not(:first-child),
+  .hours-table-scroll td:not(:first-child) { width: 30px !important; padding: 8px 0 !important; font-size: 12px !important; }
 
   /* Footer */
   .footer-top {
