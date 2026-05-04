@@ -141,7 +141,7 @@ export default function Access() {
               src="https://maps.google.com/maps?q=西宮市甲子園口３丁目２２番４号&hl=ja&output=embed"
               width="100%"
               height="340"
-              style={{ border: 0, borderRadius: 3, display: 'block' }}
+              style={{ border: 0, borderRadius: 3, display: 'block', maxWidth: '100%' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
