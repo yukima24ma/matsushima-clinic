@@ -1,85 +1,45 @@
-'use client'
-
 const linkCols = [
   {
     heading: '診療科',
-    links: ['内科', '糖尿病・代謝内科', '小児科', '健康診断・予防接種'],
+    links: [
+      { label: '内科', href: '/#departments' },
+      { label: '糖尿病・代謝内科', href: '/#departments' },
+      { label: '小児科', href: '/#departments' },
+      { label: '健康診断・予防接種', href: '/#departments' },
+      { label: '受診のご案内', href: '/#local-care' },
+    ],
   },
   {
     heading: '案内',
-    links: ['医師紹介', 'お知らせ', 'アクセス', '受診のご案内'],
+    links: [
+      { label: '医師紹介', href: '/#doctors' },
+      { label: '受診のご案内', href: '/#local-care' },
+      { label: 'お知らせ', href: '/#news' },
+      { label: 'アクセス', href: '/#access' },
+      { label: '受診のご案内', href: '/#access' },
+    ],
   },
 ]
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#1a4c7c', color: '#fff', padding: '48px 40px 32px' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-        {/* Top row: logo + link columns */}
-        <div
-          className="footer-top"
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-            marginBottom: 40,
-          }}
-        >
-          {/* Logo */}
-          <div>
-            <p
-              style={{
-                fontFamily: 'var(--font-noto-serif-jp), serif',
-                fontSize: 20,
-                letterSpacing: '0.08em',
-                marginBottom: 6,
-              }}
-            >
-              松島医院
-            </p>
-            <p
-              style={{
-                fontSize: 11,
-                opacity: 0.55,
-                letterSpacing: '0.12em',
-                fontFamily: 'var(--font-noto-sans-jp), sans-serif',
-              }}
-            >
-              MATSUSHIMA CLINIC
-            </p>
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <p>松島医院</p>
+            <span>MATSUSHIMA CLINIC</span>
           </div>
 
-          {/* Link columns */}
-          <div style={{ display: 'flex', gap: 64 }}>
+          <div className="footer-cols">
             {linkCols.map((col) => (
               <div key={col.heading}>
-                <p
-                  style={{
-                    fontSize: 11,
-                    opacity: 0.5,
-                    letterSpacing: '0.14em',
-                    marginBottom: 16,
-                    fontFamily: 'var(--font-noto-sans-jp), sans-serif',
-                  }}
-                >
-                  {col.heading}
-                </p>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <p>{col.heading}</p>
+                <ul>
                   {col.links.map((link) => (
-                    <li key={link} style={{ marginBottom: 10 }}>
-                      <a
-                        href="#"
-                        style={{
-                          fontSize: 13,
-                          color: 'rgba(255,255,255,0.75)',
-                          textDecoration: 'none',
-                          fontFamily: 'var(--font-noto-sans-jp), sans-serif',
-                          transition: 'opacity 0.15s',
-                        }}
-                        onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,1)' }}
-                        onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)' }}
-                      >
-                        {link}
+                    <li key={link.label}>
+                      <a href={link.href} className="footer-link">
+                        {link.label}
                       </a>
                     </li>
                   ))}
@@ -89,22 +49,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom rule + copyright */}
-        <div
-          style={{
-            borderTop: '1px solid rgba(255,255,255,0.15)',
-            paddingTop: 20,
-          }}
-        >
-          <p
-            style={{
-              fontSize: 12,
-              opacity: 0.45,
-              fontFamily: 'var(--font-noto-sans-jp), sans-serif',
-            }}
-          >
-            © {new Date().getFullYear()} 松島医院 All rights reserved.
-          </p>
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} 松島医院 All rights reserved.</p>
         </div>
       </div>
     </footer>
