@@ -379,6 +379,10 @@ button {
   line-height: 1.4;
 }
 
+.hero-status-panel.is-closed strong {
+  color: var(--color-text);
+}
+
 .infobar {
   flex-shrink: 0;
   background: var(--color-primary-deep);

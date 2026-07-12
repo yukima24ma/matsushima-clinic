@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import InfoBar from './InfoBar'
+import OpeningStatusPanel from './OpeningStatusPanel'
 
 export default function Hero() {
   return (
@@ -35,11 +36,7 @@ export default function Hero() {
                 priority
               />
             </div>
-            <div className="hero-status-panel">
-              <span>本日の診療</span>
-              <strong>9:00-12:00 / 16:30-19:00</strong>
-              <small>木曜・日曜・祝日休診</small>
-            </div>
+            <OpeningStatusPanel />
           </div>
         </div>
       </div>
