@@ -4,7 +4,7 @@ Public website for 松島医院, a clinic in 西宮市甲子園口. The site is 
 
 Live site:
 
-https://matsushima-koshienguchi.vercel.app
+https://www.matsushima-koshienguchi.com
 
 ## Tech Stack
 
@@ -58,7 +58,7 @@ npm run start
 The site is deployed on Vercel. Current public alias:
 
 ```text
-https://matsushima-koshienguchi.vercel.app
+https://www.matsushima-koshienguchi.com
 ```
 
-If using a custom domain later, configure the domain in Vercel and add the DNS records shown by Vercel at the domain registrar.
+The root domain `https://matsushima-koshienguchi.com` redirects to the `www` domain.

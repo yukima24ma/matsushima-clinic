@@ -1,4 +1,4 @@
-export const siteUrl = 'https://matsushima-clinic-public-deploy.vercel.app'
+export const siteUrl = 'https://www.matsushima-koshienguchi.com'
 
 export const clinic = {
   name: '松島医院',
