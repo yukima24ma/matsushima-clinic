@@ -34,7 +34,7 @@ export default function HomepageRenewalPage() {
           <header className="article-header">
             <div className="article-meta">
               <span className="pill">お知らせ</span>
-              <time dateTime="2026-07-16">2026.07.16</time>
+              <time dateTime="2026-07-12">2026.07.12</time>
             </div>
             <h1>ホームページリニューアルのお知らせ</h1>
           </header>
