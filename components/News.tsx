@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const newsItems = [
-  { date: '2026.04.25', tag: 'お知らせ', title: 'ゴールデンウィークの休診のお知らせ', href: '/news/gw-holiday' },
+  { date: '2026.07.16', tag: 'お知らせ', title: 'ホームページリニューアルのお知らせ', href: '/news/homepage-renewal' },
 ]
 
 export default function News() {

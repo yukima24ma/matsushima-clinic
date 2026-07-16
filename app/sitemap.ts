@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${siteUrl}/clinic-exterior.jpg`],
     },
     {
-      url: `${siteUrl}/news/gw-holiday`,
+      url: `${siteUrl}/news/homepage-renewal`,
       lastModified,
       changeFrequency: 'yearly',
       priority: 0.4,
