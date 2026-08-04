@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${siteUrl}/clinic-exterior.jpg`],
     },
     {
+      url: `${siteUrl}/news/obon-holiday`,
+      lastModified: new Date('2026-08-05T00:00:00+09:00'),
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
       url: `${siteUrl}/news/mountain-day-holiday`,
       lastModified: new Date('2026-08-05T00:00:00+09:00'),
       changeFrequency: 'yearly',
