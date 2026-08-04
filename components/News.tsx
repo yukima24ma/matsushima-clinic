@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 const newsItems = [
+  { date: '2026.08.05', tag: 'お知らせ', title: '山の日休業のお知らせ', href: '/news/mountain-day-holiday' },
   { date: '2026.07.16', tag: 'お知らせ', title: '海の日休診のお知らせ', href: '/news/marine-day-holiday' },
   { date: '2026.07.12', tag: 'お知らせ', title: 'ホームページリニューアルのお知らせ', href: '/news/homepage-renewal' },
 ]
