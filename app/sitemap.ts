@@ -7,10 +7,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: siteUrl,
-      lastModified: new Date('2026-08-05T00:00:00+09:00'),
+      lastModified: new Date('2026-09-13T00:00:00+09:00'),
       changeFrequency: 'monthly',
       priority: 1,
       images: [`${siteUrl}/clinic-exterior.jpg`],
+    },
+    {
+      url: `${siteUrl}/news/silver-week-holiday`,
+      lastModified: new Date('2026-09-13T00:00:00+09:00'),
+      changeFrequency: 'yearly',
+      priority: 0.4,
     },
     {
       url: `${siteUrl}/news/obon-holiday`,
