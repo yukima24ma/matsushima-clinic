@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 const newsItems = [
+  { date: '2026.11.14', tag: 'お知らせ', title: '勤労感謝の日休業のお知らせ', href: '/news/labor-thanksgiving-day-holiday' },
   { date: '2026.10.27', tag: 'お知らせ', title: '文化の日休業のお知らせ', href: '/news/culture-day-holiday' },
   { date: '2026.10.05', tag: 'お知らせ', title: 'スポーツの日休業のお知らせ', href: '/news/sports-day-holiday' },
   { date: '2026.09.13', tag: 'お知らせ', title: 'シルバーウィーク休業のお知らせ', href: '/news/silver-week-holiday' },
